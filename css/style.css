@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Rubik:wght@400;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 100%;
+    background-color: #1f1b32;
+    height: 100%;
+}
+
+.cabecalho {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 24px;
+    position: fixed;
+    background-color: #1f1b32;
+    z-index: 100;
+}
+
+.cabecalho-logo {
+    font-family: "Dancing Script" , "Rubik" , sans-serif;
+    font-size: 24px;
+    color: #f0eef6;
+}
+
+.cabecalho-logo::first-letter {
+    font-size: 30px;
+}
+
+.cabecalho-logo span{
+    color: #ffc641;
+}
+
+.cabecalho-menu {
+    display: flex;
+}
+
+.cabecalho-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho-menu-item {
+    font-family: "Rubik" , sans-serif;
+    font-weight: 400;
+    color: #f0eef6;
+    position: relative;
+    padding: 5px;
+}
+
+.cabecalho-menu-item:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 2px solid transparent;
+}
+
+.cabecalho-menu-item:hover:before {
+    animation: animate 1s linear forwards;
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: #ffc641;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+
+    50% {
+        width: 100%;
+        height: 0;
+        border-top-color: #ffc641;
+        border-right-color: #ffc641;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: #ffc641;
+        border-right-color: #ffc641;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+}
+
+.cabecalho-menu-item:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 2px solid transparent;
+}
+
+.cabecalho-menu-item:hover:after {
+    animation: animate2 1s linear forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes animate2 {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: #ffc641;
+    }
+
+    50% {
+        width: 0;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: #ffc641;
+        border-left-color: #ffc641;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: #ffc641;
+        border-left-color: #ffc641;
+    }
+}
+
+
+.conteudo {
+    border-top: 0.4px solid black ;
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh);
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo-foto img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.conteudo-escrito {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #f0eef6;
+}
+
+.conteudo-escrito h1 {
+    font-size: 36px;
+    font-family: "Rubik" , sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.conteudo-escrito p {
+    font-size: 16px;
+    font-family: "Rubik" , sans-serif;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+}
+
+.icons li a i{
+    color: #f0eef6;
+    font-style: none;
+    text-decoration: none;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.conteudo-escrito button {
+    background-color: #ffc641;
+    padding: 0.75rem 2rem;
+    border-radius: 1.25rem;
+    cursor:pointer;
+    font-family: "Rubik" , sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    background-color: #1f1b32;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 15px;
+    background-color: #ffc641;
+    border-radius: 1.25rem;
+}
+
+
+.sobre-mim {
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+    gap: 50px;
+}
+
+
+.sobre-mim-card {
+    width: 860px;
+    height: 470px;
+    background-color: azure;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.sobre-mim-foto img{
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.sobre-mim-texto p{
+    text-align: justify;
+    font-family: "Rubik" , sans-serif;
+    font-weight: 400;
+    margin: 20px;
+}
+
+/* Projetos */
+
+.projeto-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    font-family: "Rubik" , sans-serif;
+    color: #f0eef6;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 61px;
+}
+
+.project {
+    width: 870px;
+    height: 470px;
+}
+
+html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+.swiper-wrapper{
+    border-radius: 1.25rem;
+}
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #1f1b32;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .swiper-slide img {
+    display: block;
+    border-radius: 1.25rem;
+    width: 85%;
+    height: 85%;
+    object-fit: cover;
+  }
+
+  /* texto escondido */
+
+.imagem-escondida {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85%;
+    height: 85%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #f0eef6;
+    border-radius: 1.25rem;
+    margin-top: 4.08%;
+    margin-left: 7.5%;
+    display: flex;
+    font-family: "Rubik" , sans-serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+
+  .imagem-escondida > *{
+      transform: translateY(20px);
+      transition: transform 0.25s;
+  }
+
+  .imagem-escondida:hover{
+      opacity: 1;
+  }
+
+  .imagem-escondida:hover > * {
+      transform: translateY(0);
+  }
+
+  .imagem-escondida--blur {
+      backdrop-filter: blur(4px);
+  }
+
+  .imagem-titulo-escondido {
+      font-size: 32px;
+      font-weight: 600;
+  }
+
+  .imagem-texto-escondido {
+      font-size: 16px;
+      font-weight: 400;
+      margin-top: 0.25em;
+  }
+
+  .imagem-btn-escondido {
+    background-color: #ffc641;
+    padding: 0rem 1rem;
+    border-radius: 1.25rem;
+    cursor: pointer;
+    font-family: "Rubik" , sans-serif;
+    font-weight: 600;
+    color: #f0eef6;
+    margin-top: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    z-index: 1000;
+  }
+
+
+  /* swiper button*/
+
+  .swiper-button-next,
+  .swiper-button-prev{
+      color: #ffc641;
+  }
+
+
+  .swiper-pagination-bullet-active {
+    background-color: #ffc641;
+  }
+
+  /* Contato*/
+
+  .contato {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      padding-top: 70px;
+  }
+
+  .caixa-contato {
+      height: 500px;
+      width: 1000px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+
+  .info-pessoais{
+      display: flex;
+      flex-direction: column;
+      color: #f0eef6;
+      font-family: "Rubik" , sans-serif;
+      margin-bottom: 150px;
+
+  }
+
+  .info-num{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+  }
+
+  .info-num h3 , .info-mail h3 {
+      margin-bottom: 10px;
+  }
+
+  .info-num span , .info-mail span {
+      align-items: center;
+  }
+
+  .info-num span i , .info-mail span i{
+      font-size: 20px;
+  }
+
+  .contato-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+  }
+
+  .form {
+      display: block;
+      padding: 20px;
+      background-color: azure;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+      border-radius: 1.25rem;
+  }
+
+  .form .row {
+      display: block;
+      padding: 10px;
+  }
+
+  .form .flx{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .form .flx .input {
+      flex: 1;
+  }
+
+  .form .flx .input:first-child {
+      margin-right: 20px;
+  }
+
+  .form .input {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #cccccc;
+      border-radius: 1.25rem;
+      font-size: 16px;
+      font-family: "Rubik" , sans-serif;
+      font-weight: 400;
+
+  }
+
+  .form .textarea {
+      display: block;
+      width: 100%;
+      height: 150px;
+      padding: 8px;
+      border: 1px solid #cccccc;
+      border-radius: 1.25rem;
+      font-size: 16px;
+      font-family: "Rubik" , sans-serif;
+      font-weight: 400;
+      resize: none;
+  }
+
+  .form .btn{
+      display: block;
+      padding: 8px;
+      font-family: "Rubik" , sans-serif;
+      font-weight: 400;
+      border: 1px solid #cccccc;
+      border-radius: 1.25rem;
+      cursor: pointer;  
+  }
+
+  footer {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  footer h4 {
+      font-family: 'Rubik' , sans-serif;
+      color: white;
+      font-size: 12px;
+  }
+
+  footer a {
+      text-decoration: none;
+      color: #ffc641;
+  }
